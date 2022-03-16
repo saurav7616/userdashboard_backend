@@ -1,4 +1,4 @@
-const handleUsers = (res, db) =>{
+const handleUsers = (res, db) =>{									//returns list of all users
 	db.select('*').from('users')
 	.then(user => {
 		if(user.length){
