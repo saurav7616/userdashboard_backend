@@ -7,7 +7,7 @@ const handleUsers = (res, db) =>{									//returns list of all users
 			res.status(400).json('userlist not found');
 		}
 	})
-	.catch(err => res.status(400).json('error getting users'))
+	.catch(err => res.status(400).json('error getting users' + err))
 }
 
 module.exports = {
