@@ -28,6 +28,7 @@ app.get('/users', (req,res) => { users.handleUsers(res, db) })                  
 app.post('/adduser', (req,res) => { addUser.handleAddUser(req, res, db) })          //add user
 app.delete('/deleteuser' , (req,res) => { delUser.handleDelUser(req, res, db) })    //delete user
 
-app.listen(process.env.PORT || 3000, () => {
-	console.log(`runnning fine on port ${process.env.PORT}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+	console.log(`runnning fine on port ${PORT}`);
 })
