@@ -23,8 +23,8 @@ const delUser = require('./controllers/delete_user.js')
 app.use(bodyParser.json());
 app.use(cors());	
 
-// app.get('/', (req,res) => { res.json('working') })                                  //base endpoint
-app.get('/', (req,res) => { users.handleUsers(res, db) })                      //get users list
+app.get('/', (req,res) => { res.json('working') })                                  //base endpoint
+app.get('/users', (req,res) => { users.handleUsers(res, db) })                      //get users list
 app.post('/adduser', (req,res) => { addUser.handleAddUser(req, res, db) })          //add user
 app.delete('/deleteuser' , (req,res) => { delUser.handleDelUser(req, res, db) })    //delete user
 
